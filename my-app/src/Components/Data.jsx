@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import  './index1.css';
+//import  './index1.css';
 //import StringToHTML from './stringToHTML';
 
 
@@ -59,20 +59,20 @@ const PostList = () => {
     // </div>
     <div>
     <h2>Post List</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Id</th>
-          <th>Title</th>
-          <th>Body</th>
-        </tr>
-      </thead>
+    <table class="table table-dark table-striped-columns">
+  <thead>
+  <tr class="table-info">
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Body</th>
+    </tr>
+  </thead>
       <tbody>
         {posts.map(post => (
           <tr key={post.id}>
-            <td>{post.id}</td>
-            <td>{post.title}</td>
-            <td>{post.body}</td>
+             <td class="table-secondary">{post.id}</td>
+             <td class="table-secondary">{post.title}</td>
+             <td class="table-secondary">{post.body}</td>
           </tr>
         ))}
       </tbody>
@@ -83,4 +83,3 @@ const PostList = () => {
 };
 
 export default PostList;
-
